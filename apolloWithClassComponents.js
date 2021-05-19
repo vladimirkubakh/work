@@ -16,9 +16,9 @@ let MUTATION = gql`
 /*HOC, который заэнхейнсит классовый компонент
 и позволит юзать аполло в нём. Его задача только
 пробросить колбэки для работы с аполло*/
-let Сonnector = function(Component, Querie){
+let Сonnector = function(Component, Query){
   return function() {
-    let [mutate] = useMutation(Querie);
+    let [mutate] = useMutation(Query);
     return (
         <Component mutate={mutate}/>
     );
