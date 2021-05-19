@@ -45,7 +45,9 @@ class BehaviorClassComponent extends React.Component {
     return (
       <>
       <input type="text" value={this.state.data} onChange={(e)=>{this.setState({data:e.target.value})}}/>
-      <button onClicl={this.someHandler}/>
+      <button onClick={this.someHandler}>
+        отправить данные
+      </button>
       </>
     );
   }
